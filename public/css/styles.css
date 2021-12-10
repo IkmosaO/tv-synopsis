@@ -1,0 +1,19 @@
+table,th, td {
+    border-style: solid;
+    border-color: black;
+    border-collapse: collapse;
+    border-width: 2px;
+}
+td,th {
+    padding: 4px;
+    margin-right: 10px;
+}
+th {
+    color: rgb(255, 255, 255);
+    background-color: rgb(111, 145, 235);
+    text-align: center;
+}
+h2 {
+    text-align: center;
+    padding: auto;
+}

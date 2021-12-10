@@ -10,10 +10,14 @@ app.get('/', (request, response) => {
   return response.render('index', { showdata })
 })
 
-app.get('/seasonpage/:id', (request, response) => {
-  const show = showdata.find((show) => { return show.id === parseInt(request.params.id) })
+app.get('/seasonpage/:number', (request, response) => {
+  // const clientData = request.params.number
+  const showSeason = showdata.seasons.find((showSeason) => {
+    return showSeason.number === Number(request.params.number)
+  })
+  // console.log(showSeason)
 
-  return response.render('seasonpage', { show })
+  return response.render('seasonpage', { showSeason, title: showdata.title })
 })
 
 
