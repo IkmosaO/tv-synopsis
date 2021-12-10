@@ -1,0 +1,17 @@
+html
+    include partials/head.pug
+    body
+        h1= title
+            h2= `Season ${showSeason.number}`
+            table 
+                tr 
+                    th No.
+                    th Title
+                    th Director
+                for episode in showSeason.episodes
+                    tr 
+                        td= episode.number 
+                        td= episode.title
+                        td= episode.director
+                    tr 
+                        td(colspan="3")= episode.synopsis
